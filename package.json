@@ -1,0 +1,19 @@
+{
+  "name": "learningmern",
+  "version": "1.0.0",
+  "description": "Social network for developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vashistpatel/learningMERN.git"
+  },
+  "author": "vashist patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vashistpatel/learningMERN/issues"
+  },
+  "homepage": "https://github.com/vashistpatel/learningMERN#readme"
+}
