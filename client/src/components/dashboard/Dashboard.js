@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
-import { getCurrentProfile } from '../../actions/profile';
+import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 // import { Fragment } from 'react';
 import DashboardActions from './DashboardActions';
 import Experience from './Experience';
@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 const Dashboard = ({getCurrentProfile, deleteAccount, auth:{ user }, profile:{ profile, loading }}) => {
     useEffect(() => {
         getCurrentProfile();
-    }, [])
+    }, [getCurrentProfile])
 
     return loading && profile === null ? (<Spinner />) : (
     <Fragment>
@@ -58,5 +58,6 @@ const mapStateToProps = state => ({
     auth: state.auth,
     profile: state.profile
 })
+
 
 export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(Dashboard)
